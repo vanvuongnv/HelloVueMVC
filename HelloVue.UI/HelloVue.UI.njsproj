@@ -40,6 +40,13 @@
     <Content Include="src\index.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="src\plugins\axios.js" />
+    <Content Include="src\store\test\store.js" />
+    <Content Include="src\store\user\actions.js" />
+    <Content Include="src\store\user\getters.js" />
+    <Content Include="src\store\user\index.js" />
+    <Content Include="src\store\user\mutations.js" />
+    <Content Include="src\store\user\state.js" />
     <Content Include="src\styles\style.scss">
       <SubType>Code</SubType>
     </Content>
@@ -50,6 +57,10 @@
   <ItemGroup>
     <Folder Include="src\" />
     <Folder Include="src\components\" />
+    <Folder Include="src\store\" />
+    <Folder Include="src\plugins\" />
+    <Folder Include="src\store\test\" />
+    <Folder Include="src\store\user\" />
     <Folder Include="src\styles\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />

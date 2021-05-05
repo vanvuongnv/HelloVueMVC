@@ -88,6 +88,6 @@ module.exports = {
         }),
 
         // Clone any other rules you have defined and apply them to the corresponding language blocks in .vue files.
-        new VueLoaderPlugin()
+        new VueLoaderPlugin(),
     ],
 };
