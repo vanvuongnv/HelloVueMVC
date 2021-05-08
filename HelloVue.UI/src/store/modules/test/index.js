@@ -1,14 +1,12 @@
-//https://medium.com/codingthesmartway-com-blog/vue-js-2-state-management-with-vuex-introduction-db26cb495113
-import Vue from 'vue'
-import Vuex from 'vuex'
-Vue.use(Vuex)
 const state = {
     count: 0
 }
 
 const getters = {
-    evenOrOdd: state => state.count % 2 === 0 ? 'even' : 'odd'
+    evenOrOdd: (state) => state.count % 2 === 0 ? 'even' : 'odd'
 }
+
+
 
 //Modifying State
 //synchronously By Using Mutations
@@ -46,10 +44,13 @@ const actions = {
     }
 }
 
-export default new Vuex.Store({
+const namespaced = true;
+
+export const test = {
+    namespaced,
     state,
     getters,
     actions,
     mutations
-})
+};
 

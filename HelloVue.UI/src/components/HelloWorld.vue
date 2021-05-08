@@ -8,12 +8,12 @@
         Hello: {{fullName}}
 
         <div id="test-store">
-            Hello State: {{ $store.state.count }}
-            Counter: {{ $store.state.count }} times, count is {{ evenOrOdd }}.
+            Hello State: {{ count }}
+            Counter: {{ count }} times, count is {{ evenOrOdd }}.
         </div>
         <div class="container">
             <div class="row text-center">
-                <h3>Clicked: {{ $store.state.count }} times, count is {{ evenOrOdd }}.</h3>
+                <h3>Clicked: {{ count }} times, count is {{ evenOrOdd }}.</h3>
                 <button class="btn btn-success" @click="increment">+</button>
                 <button class="btn btn-danger" @click="decrement">-</button>
                 <button class="btn" @click="incrementIfOdd">Increment if odd</button>
@@ -25,19 +25,24 @@
 </template>
 
 <script>
-    import { mapGetters, mapActions } from 'vuex';
+    import { mapGetters, mapActions, mapState } from 'vuex';
 
     export default {
         name: 'HelloWorld',
-        computed: mapGetters([
-            'evenOrOdd'
-        ]),
+        computed: {
+            ...mapState('test', [
+                'count',
+            ]),
+            ...mapGetters('test',[
+                'evenOrOdd'
+            ])
+        },
         data: () => ({
             items: [],
             fullName:''
         }),        
         methods: {
-            ...mapActions([
+            ...mapActions('test', [
                 'increment',
                 'decrement',
                 'incrementIfOdd',

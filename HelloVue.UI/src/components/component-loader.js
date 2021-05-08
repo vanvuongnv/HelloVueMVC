@@ -3,7 +3,7 @@ import Vue from 'vue';
 
 import axios from 'axios';
 
-import store from '../store/test/store';
+import { store } from '../store';
 
 //setup plugin
 Vue.use({
@@ -20,12 +20,17 @@ Vue.use({
 
 //components
 import HelloWorld from './HelloWorld.vue';
+import ProductList from './ProductList.vue';
 
 const components = [
     {
         component: HelloWorld,
         element: 'hello-world'
     },
+    {
+        component: ProductList,
+        element: 'product-list'
+    }
 ];
 
 export default {
@@ -38,8 +43,8 @@ export default {
 
             // Create a new Vue instance and mount it to the custom element.
             new Vue({
+                render: createElement => createElement(component),
                 store,
-                render: createElement => createElement(component)
             }).$mount(element);
         });
     }

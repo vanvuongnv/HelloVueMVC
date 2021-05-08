@@ -37,16 +37,22 @@
     <Content Include="src\components\HelloWorld.vue">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="src\components\ProductList.vue" />
     <Content Include="src\index.js">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\plugins\axios.js" />
-    <Content Include="src\store\test\store.js" />
-    <Content Include="src\store\user\actions.js" />
-    <Content Include="src\store\user\getters.js" />
-    <Content Include="src\store\user\index.js" />
-    <Content Include="src\store\user\mutations.js" />
-    <Content Include="src\store\user\state.js" />
+    <Content Include="src\store\index.js" />
+    <Content Include="src\store\modules\products\actions.js" />
+    <Content Include="src\store\modules\products\getters.js" />
+    <Content Include="src\store\modules\products\index.js" />
+    <Content Include="src\store\modules\products\mutations.js" />
+    <Content Include="src\store\modules\test\index.js" />
+    <Content Include="src\store\modules\user\actions.js" />
+    <Content Include="src\store\modules\user\getters.js" />
+    <Content Include="src\store\modules\user\index.js" />
+    <Content Include="src\store\modules\user\mutations.js" />
+    <Content Include="src\store\modules\user\state.js" />
     <Content Include="src\styles\style.scss">
       <SubType>Code</SubType>
     </Content>
@@ -59,8 +65,10 @@
     <Folder Include="src\components\" />
     <Folder Include="src\store\" />
     <Folder Include="src\plugins\" />
-    <Folder Include="src\store\test\" />
-    <Folder Include="src\store\user\" />
+    <Folder Include="src\store\modules\" />
+    <Folder Include="src\store\modules\products\" />
+    <Folder Include="src\store\modules\test\" />
+    <Folder Include="src\store\modules\user\" />
     <Folder Include="src\styles\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
